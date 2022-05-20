@@ -12,7 +12,7 @@ namespace Solution
             ListNode l1 = new ListNode { val = 2, next = new ListNode { val = 4, next = new ListNode { val = 3 } } };
             ListNode l2 = new ListNode { val = 5, next = new ListNode { val = 6, next = new ListNode { val = 4 } } };
 
-            Solution(l1, l2);
+            var response = Solution(l1, l2);
         }
         public static ListNode Solution(ListNode l1, ListNode l2)
         {

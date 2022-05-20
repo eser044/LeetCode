@@ -2,14 +2,14 @@
 
 namespace Solution
 {
-    public class MergeTwoLists
+    public class MergeTwoSortedLists
     {
         public static void Run()
         {
             ListNode l1 = new ListNode { val = 1, next = new ListNode { val = 2, next = new ListNode { val = 4 } } };
             ListNode l2 = new ListNode { val = 1, next = new ListNode { val = 3, next = new ListNode { val = 4 } } };
 
-            Solution(l1, l2);
+            var response =  Solution(l1, l2);
         }
 
         public static ListNode Solution(ListNode list1, ListNode list2)
