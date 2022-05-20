@@ -4,3 +4,4 @@
 //RomantoInteger.Run();
 //AddTwoNumbers.Run();
 //MergeTwoSortedLists.Run();
+PalindromeNumber.Run();
