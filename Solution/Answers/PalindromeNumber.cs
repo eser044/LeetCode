@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Solution
+namespace Solution.Answers
 {
     public class PalindromeNumber
     {
@@ -20,7 +20,7 @@ namespace Solution
         {
             if (x < 0) return false;
             if (x > -1 && x < 10) return true;
-            
+
             string xString = x.ToString();
 
             bool isLenghtEvenNumber = x.ToString().Length % 2 == 0;

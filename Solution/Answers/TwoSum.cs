@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Solution
+namespace Solution.Answers
 {
     public class TwoSum
     {
         public static void Run()
         {
-            var nums = new int[] { 2,7,11,15};
+            var nums = new int[] { 2, 7, 11, 15 };
 
             var response = Solution(nums, 9);
         }
@@ -22,7 +22,7 @@ namespace Solution
             {
                 for (int j = 0; j < nums.Length; j++)
                 {
-                    if ((i != j) && (nums[i] + nums[j] == target))
+                    if (i != j && nums[i] + nums[j] == target)
                     {
                         response[0] = i;
                         response[1] = j;

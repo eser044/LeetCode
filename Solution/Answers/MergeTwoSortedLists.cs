@@ -1,6 +1,6 @@
 ﻿using Solution.Model;
 
-namespace Solution
+namespace Solution.Answers
 {
     public class MergeTwoSortedLists
     {
@@ -9,7 +9,7 @@ namespace Solution
             ListNode l1 = new ListNode { val = 1, next = new ListNode { val = 2, next = new ListNode { val = 4 } } };
             ListNode l2 = new ListNode { val = 1, next = new ListNode { val = 3, next = new ListNode { val = 4 } } };
 
-            var response =  Solution(l1, l2);
+            var response = Solution(l1, l2);
         }
 
         public static ListNode Solution(ListNode list1, ListNode list2)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Solution
+namespace Solution.Answers
 {
     public class RomantoInteger
     {

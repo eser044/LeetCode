@@ -1,6 +1,6 @@
 ﻿using Solution.Model;
 
-namespace Solution
+namespace Solution.Answers
 {
     public class AddTwoNumbers
     {
