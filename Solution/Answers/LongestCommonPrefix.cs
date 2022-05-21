@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Solution.Answers
 {
-    internal class LongestCommonPrefix
+    public class LongestCommonPrefix
     {
         public static void Run()
         {

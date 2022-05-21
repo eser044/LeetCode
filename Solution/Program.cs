@@ -5,4 +5,5 @@
 //AddTwoNumbers.Run();
 //MergeTwoSortedLists.Run();
 //PalindromeNumber.Run();
-LongestCommonPrefix.Run();
+//LongestCommonPrefix.Run();
+RemoveDuplicatesFromSortedArray.Run();
