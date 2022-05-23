@@ -7,4 +7,6 @@
 //PalindromeNumber.Run();
 //LongestCommonPrefix.Run();
 //RemoveDuplicatesFromSortedArray.Run();
-ReverseInteger.Run();
+//ReverseInteger.Run();
+//ImplementStrStr.Run();
+LongestPalindromicSubstring.Run();
