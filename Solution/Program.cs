@@ -6,4 +6,5 @@
 //MergeTwoSortedLists.Run();
 //PalindromeNumber.Run();
 //LongestCommonPrefix.Run();
-RemoveDuplicatesFromSortedArray.Run();
+//RemoveDuplicatesFromSortedArray.Run();
+ReverseInteger.Run();
