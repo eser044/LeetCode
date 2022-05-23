@@ -21,17 +21,17 @@ namespace Solution.Answers
         {
             List<int> newDigitis = new List<int>();
 
-            bool Iscarry = digits[digits.Length - 1] == 9;
+            bool IsCarry = digits[digits.Length - 1] == 9;
 
             for (int i = digits.Length - 1; i > -1; i--)
             {
-                if (Iscarry)
+                if (IsCarry)
                 {
-                    Iscarry = digits[i] == 9;
+                    IsCarry = digits[i] == 9;
 
                     newDigitis.Add((digits[i] + 1) % 10);
 
-                    if (i == 0 && Iscarry)
+                    if (i == 0 && IsCarry)
                         newDigitis.Add((digits[i] + 1) / 10);
                 }
                 else
