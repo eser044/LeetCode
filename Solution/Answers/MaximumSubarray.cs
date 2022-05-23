@@ -11,7 +11,7 @@ namespace Solution.Answers
         public static void Run()
         {
             var nums = new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
-            var respınse = Solution(nums);
+            var response = Solution(nums);
         }
         public static int Solution(int[] nums)
         {
