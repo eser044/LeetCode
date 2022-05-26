@@ -21,13 +21,14 @@ namespace Solution.Answers
                 possibilities[i] = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             }
 
+
             var hints = new List<Hint>
             {
-                new(new[] {6, 9, 0}, 1, true),
-                new(new[] {7, 4, 1}, 1, false),
-                new(new[] {5, 0, 4}, 2, false),
-                new(new[] {3, 8, 7}, 0, false),
-                new(new[] {2, 1, 9}, 1, false)
+                new Hint{Numbers = new[] {6, 9, 0}, CorrectCount =  1, CorrectPlace = true},
+                new Hint{Numbers = new[] {7, 4, 1}, CorrectCount =  1, CorrectPlace = false},
+                new Hint{Numbers = new[] {5, 0, 4}, CorrectCount =  2, CorrectPlace = false},
+                new Hint{Numbers = new[] {3, 8, 7}, CorrectCount =  0, CorrectPlace = false},
+                new Hint{Numbers = new[] {2, 1, 9}, CorrectCount =  1, CorrectPlace = false}
             };
 
             foreach (var hint in hints)
@@ -59,8 +60,8 @@ namespace Solution.Answers
                         var fits = true;
                         foreach (var hint in hints)
                         {
-                            var matches = combination.Intersect(hint.Numbers).ToArray();
-                            if (matches.Length != hint.CorrectCount)
+                            var matches = combination.Intersect(hint.Numbers).ToList();
+                            if (matches.Count != hint.CorrectCount)
                             {
                                 fits = false;
                                 continue;
@@ -82,7 +83,7 @@ namespace Solution.Answers
                 }
             }
 
-            return string.Join('-', combinations.Select(i => string.Join(',', i)));
+            return string.Join('-', combinations.Select(i => string.Join(null, i)));
         }
     }
 }

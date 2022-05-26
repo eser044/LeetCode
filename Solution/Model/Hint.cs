@@ -7,16 +7,9 @@ using System.Threading.Tasks;
 namespace Solution.Model
 {
     public class Hint
-    {
-        public int[] Numbers { get; }
-        public int CorrectCount { get; }
-        public bool CorrectPlace { get; }
-
-        public Hint(int[] numbers, int correctCount, bool correctPlace)
-        {
-            Numbers = numbers;
-            CorrectCount = correctCount;
-            CorrectPlace = correctPlace;
-        }
+    {        
+        public int[] Numbers { get; set; }
+        public int CorrectCount { get; set; }
+        public bool CorrectPlace { get; set; }
     }
 }
