@@ -12,4 +12,5 @@
 //LongestPalindromicSubstring.Run();
 //ValidParentheses.Run();
 //MaximumSubarray.Run();
-PlusOne.Run();
+//PlusOne.Run();
+ThreeDigitLock.Run();
