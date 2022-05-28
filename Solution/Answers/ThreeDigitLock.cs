@@ -15,32 +15,32 @@ namespace Solution.Answers
         }
         public static string Solution()
         {
-            var possibilities = new List<int>[3];
-            for (var i = 0; i < 3; i++)
+            var possibilities = new List<List<int>>
             {
-                possibilities[i] = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            }
-
+                new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 },
+                new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 },
+                new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }
+            };
 
             var hints = new List<Hint>
             {
-                new Hint{Numbers = new[] {6, 9, 0}, CorrectCount =  1, CorrectPlace = true},
-                new Hint{Numbers = new[] {7, 4, 1}, CorrectCount =  1, CorrectPlace = false},
-                new Hint{Numbers = new[] {5, 0, 4}, CorrectCount =  2, CorrectPlace = false},
-                new Hint{Numbers = new[] {3, 8, 7}, CorrectCount =  0, CorrectPlace = false},
-                new Hint{Numbers = new[] {2, 1, 9}, CorrectCount =  1, CorrectPlace = false}
+                new Hint{Numbers = new[] {6, 9, 0}, CorrectNumberCount =  1, CorrectNumberPlace = true},
+                new Hint{Numbers = new[] {7, 4, 1}, CorrectNumberCount =  1, CorrectNumberPlace = false},
+                new Hint{Numbers = new[] {5, 0, 4}, CorrectNumberCount =  2, CorrectNumberPlace = false},
+                new Hint{Numbers = new[] {3, 8, 7}, CorrectNumberCount =  0, CorrectNumberPlace = false},
+                new Hint{Numbers = new[] {2, 1, 9}, CorrectNumberCount =  1, CorrectNumberPlace = false}
             };
 
             foreach (var hint in hints)
             {
-                if (hint.CorrectCount == 0)
+                if (hint.CorrectNumberCount == 0)
                 {
                     foreach (var possibility in possibilities)
                     {
                         possibility.RemoveAll(i => hint.Numbers.Any(j => i == j));
                     }
                 }
-                else if (!hint.CorrectPlace)
+                else if (!hint.CorrectNumberPlace)
                 {
                     for (var i = 0; i < 3; i++)
                     {
@@ -61,7 +61,7 @@ namespace Solution.Answers
                         foreach (var hint in hints)
                         {
                             var matches = combination.Intersect(hint.Numbers).ToList();
-                            if (matches.Count != hint.CorrectCount)
+                            if (matches.Count != hint.CorrectNumberCount)
                             {
                                 fits = false;
                                 continue;
@@ -70,7 +70,7 @@ namespace Solution.Answers
                             foreach (var match in matches)
                             {
                                 var placeCondition = Array.FindIndex(combination, val => val == match) == Array.FindIndex(hint.Numbers, val => val == match);
-                                if (placeCondition != hint.CorrectPlace)
+                                if (placeCondition != hint.CorrectNumberPlace)
                                 {
                                     fits = false;
                                     break;

@@ -6,11 +6,11 @@ namespace Solution.Answers
     {
         public static void Run()
         {
-            //ListNode l1 = new ListNode { val = 9, next = new ListNode { val = 9, next = new ListNode { val = 9, next = new ListNode { val = 9, next = new ListNode { val = 9, next = new ListNode { val = 9, next = new ListNode { val = 9 } } } } } } };
-            //ListNode l2 = new ListNode { val = 9, next = new ListNode { val = 9, next = new ListNode { val = 9, next = new ListNode { val = 9 } } } };
+            ListNode l1 = new ListNode { val = 9, next = new ListNode { val = 9, next = new ListNode { val = 9, next = new ListNode { val = 9, next = new ListNode { val = 9, next = new ListNode { val = 9, next = new ListNode { val = 9 } } } } } } };
+            ListNode l2 = new ListNode { val = 9, next = new ListNode { val = 9, next = new ListNode { val = 9, next = new ListNode { val = 9 } } } };
 
-            ListNode l1 = new ListNode { val = 2, next = new ListNode { val = 4, next = new ListNode { val = 3 } } };
-            ListNode l2 = new ListNode { val = 5, next = new ListNode { val = 6, next = new ListNode { val = 4 } } };
+            //ListNode l1 = new ListNode { val = 2, next = new ListNode { val = 4, next = new ListNode { val = 3 } } };
+            //ListNode l2 = new ListNode { val = 5, next = new ListNode { val = 6, next = new ListNode { val = 4 } } };
 
             var response = Solution(l1, l2);
         }
