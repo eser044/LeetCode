@@ -46,11 +46,8 @@ namespace Solution.Answers
                     tmp = tmp.Substring(indexOf + 1) + s[i].ToString();
                 }
             }
-
-            if (tmp.Length > longest.Length)
-                longest = tmp;
-
-            return longest.Length;
+            
+            return longest.Length > tmp.Length ? longest.Length : tmp.Length;   
         }
     }
 }
