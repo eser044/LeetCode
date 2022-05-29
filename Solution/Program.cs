@@ -16,4 +16,6 @@
 //ThreeDigitLock.Run();
 //LongestSubstringWithoutRepeatingCharacters.Run();
 //ZigzagConversion.Run();
-IntegerToRoman.Run();
+//IntegerToRoman.Run();
+//ThreeSum.Run();
+SudokuSolver.Run();
