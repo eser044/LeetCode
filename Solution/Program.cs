@@ -18,4 +18,5 @@
 //ZigzagConversion.Run();
 //IntegerToRoman.Run();
 //ThreeSum.Run();
-SudokuSolver.Run();
+//SudokuSolver.Run();
+StringtoIntegerAtoi.Run();
