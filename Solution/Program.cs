@@ -23,7 +23,9 @@
 //RomantoInteger.Run();
 //TwoSum.Run();
 //MaxArea.Run();
-FourSum.Run();
+//FourSum.Run();
+//GenerateParenthesis.Run();
+MyPow.Run();
 
 
 //Working working = new Working();
@@ -32,7 +34,6 @@ FourSum.Run();
 ////Console.WriteLine(animal1.GetType().Name);
 //working.DoSomething((dynamic)animal1);
 ////Console.WriteLine(animal1.GetType().Name);
-
 
 //public class Animal{}
 
