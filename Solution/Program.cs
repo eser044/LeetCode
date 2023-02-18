@@ -1,6 +1,6 @@
 ﻿using Solution.Answers;
 
-HasPathSum.Run();
+//HasPathSum.Run();
 //LetterCombinations.Run();
 //StringtoIntegerAtoi.Run();
 //SudokuSolver.Run();
@@ -22,3 +22,29 @@ HasPathSum.Run();
 //AddTwoNumbers.Run();
 //RomantoInteger.Run();
 //TwoSum.Run();
+MaxArea.Run();
+
+
+//Working working = new Working();
+//Animal animal1 = new Horse();
+//working.DoSomething(animal1);
+////Console.WriteLine(animal1.GetType().Name);
+//working.DoSomething((dynamic)animal1);
+////Console.WriteLine(animal1.GetType().Name);
+
+
+//public class Animal{}
+
+//public class Horse : Animal{}
+
+//public class Working
+//{
+//    public void DoSomething(Animal animal)
+//    {
+//        Console.WriteLine("Animal");
+//    }
+//    public void DoSomething(Horse horse)
+//    {
+//        Console.WriteLine("Horse");
+//    }
+//}
