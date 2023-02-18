@@ -18,7 +18,7 @@
             {
                 int minHeight = height[i] < height[j] ? height[i] : height[j];
                 int area = (j - i) * minHeight;
-                maxArea = Math.Max(maxArea, area);
+                maxArea = maxArea > area ? maxArea : area;
 
                 if (height[i] < height[j])
                     i++;
