@@ -1,4 +1,6 @@
-﻿using Solution.Answers;
+﻿using BenchmarkDotNet.Running;
+using Solution.Answers;
+using Solution.Banchmarks;
 
 //HasPathSum.Run();
 //LetterCombinations.Run();
@@ -25,7 +27,10 @@
 //MaxArea.Run();
 //FourSum.Run();
 //GenerateParenthesis.Run();
-MyPow.Run();
+//MyPow.Run();
+//UniquePaths.Run();
+
+BenchmarkRunner.Run<UniquePathsBanchmarks>();
 
 
 //Working working = new Working();

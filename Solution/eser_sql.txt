@@ -1,0 +1,37 @@
+CREATE OR REPLACE TRIGGER tr_eser_dml
+AFTER INSERT OR UPDATE OR DELETE ON eser
+FOR EACH ROW
+DECLARE
+  l_sql clob;
+BEGIN
+  IF INSERTING THEN
+    l_sql := 'INSERT INTO ESER (';
+    FOR i IN 1..(nvl(SQL%ROWCOUNT,0)-1) LOOP
+      l_sql := l_sql || SQL%COLUMN_NAME(i) || ', ';
+    END LOOP;
+    l_sql := l_sql || SQL%COLUMN_NAME(nvl(SQL%ROWCOUNT,1)) || ') VALUES (';
+    FOR i IN 1..(nvl(SQL%ROWCOUNT,0)-1) LOOP
+      l_sql := l_sql || ':new.' || SQL%COLUMN_NAME(i) || ', ';
+    END LOOP;
+    l_sql := l_sql || ':new.' || SQL%COLUMN_NAME(nvl(SQL%ROWCOUNT,1)) || ')';
+    INSERT INTO eser_audit (user_name, sql_text, operation, timestamp)
+    VALUES (USER, l_sql, 'INSERT', SYSDATE);
+  ELSIF UPDATING THEN
+    l_sql := 'UPDATE ESER SET ';
+    FOR i IN 1..(nvl(SQL%ROWCOUNT,0)-1) LOOP
+      l_sql := l_sql || SQL%COLUMN_NAME(i) || ' = :new.' || SQL%COLUMN_NAME(i) || ', ';
+    END LOOP;
+    l_sql := l_sql || SQL%COLUMN_NAME(nvl(SQL%ROWCOUNT,1)) || ' = :new.' || SQL%COLUMN_NAME(nvl(SQL%ROWCOUNT,1)));
+    INSERT INTO eser_audit (user_name, sql_text, operation, timestamp)
+    VALUES (USER, l_sql, 'UPDATE', SYSDATE);
+  ELSIF DELETING THEN
+    l_sql := 'DELETE FROM ESER WHERE ';
+    FOR i IN 1..(nvl(SQL%ROWCOUNT,0)-1) LOOP
+      l_sql := l_sql || SQL%COLUMN_NAME(i) || ' = :old.' || SQL%COLUMN_NAME(i) || ' AND ';
+    END LOOP;
+    l_sql := l_sql || SQL%COLUMN_NAME(nvl(SQL%ROWCOUNT,1)) || ' = :old.' || SQL%COLUMN_NAME(nvl(SQL%ROWCOUNT,1));
+    INSERT INTO eser_audit (user_name, sql_text, operation, timestamp)
+    VALUES (USER, l_sql, 'DELETE', SYSDATE);
+  END IF;
+END;
+/
